@@ -14,22 +14,26 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 
 ---
 
-# 🚧 Current Progress
+# 📈 Current Progress
 
 ## ✅ Completed
 
-- Created the Power BI project.
 - Imported the HR Analytics dataset.
-- Performed data quality assessment.
-- Cleaned and transformed the dataset using Power Query.
-- Loaded the cleaned dataset into Power BI.
+- Cleaned and transformed the data using Power Query.
+- Removed missing values.
+- Removed duplicate records.
+- Corrected spelling inconsistencies.
+- Validated data types.
+- Designed the dashboard header.
+- Applied dashboard branding and theme colors.
 
-## 🔄 Upcoming
+## 🔄 Next Steps
 
-- Build the relational data model.
-- Create DAX measures.
-- Design the interactive dashboard.
-- Generate business insights.
+- Design KPI cards.
+- Create slicers.
+- Build charts and visualizations.
+- Add DAX measures.
+- Finalize dashboard layout.
 
 ---
 
@@ -165,6 +169,96 @@ This ensures accurate calculations and visualizations throughout the project.
 ### ✔️ Load Cleaned Dataset
 
 After completing all cleaning and validation steps, the dataset was loaded into Power BI using the **Close & Apply** option.
+
+---
+
+# 🎨 Dashboard Design
+
+After preparing and cleaning the dataset, the next stage of the project focused on designing the user interface for the HR Analytics dashboard.
+
+The objective was to create a clean, modern, and professional dashboard layout that provides a strong visual foundation for presenting HR insights.
+
+---
+
+## 🖥 Dashboard Header
+
+The first component designed was the dashboard header.
+
+The following customizations were applied:
+
+### 📐 Header Container
+
+- Added a **Text Box** to serve as the dashboard header.
+- Set the dimensions to:
+  - **Width:** 1259 px
+  - **Height:** 85 px
+
+---
+
+### 🎨 Background Styling
+
+Applied a professional corporate theme using:
+
+| Property | Value |
+|----------|-------|
+| Background Color | `#1F3A8A` |
+| Transparency | `0%` |
+
+---
+
+### 📝 Header Title
+
+Configured the dashboard title with the following formatting:
+
+| Property | Value |
+|----------|-------|
+| Text | **HR ANALYTICS DASHBOARD** |
+| Font Size | 36 |
+| Font Color | White |
+| Font Weight | Bold |
+| Text Alignment | Center |
+
+---
+
+### ⬜ Border Styling
+
+Enhanced the header appearance by enabling a visual border.
+
+| Property | Value |
+|----------|-------|
+| Border | Enabled |
+| Corner Radius | 12 px |
+| Border Color | `#E6E6E6` |
+
+---
+
+### 🌑 Shadow Effect
+
+Added a subtle shadow to create depth and improve visual hierarchy.
+
+| Property | Value |
+|----------|-------|
+| Shadow | Enabled |
+| Shadow Color | `#B3B3B3` |
+
+---
+
+### 🖼 Dashboard Branding
+
+Added a company-style logo to the left side of the dashboard title to improve branding and overall visual appeal.
+
+---
+
+### 🎨 Dashboard Canvas
+
+Configured the report page background with a soft neutral color.
+
+| Property | Value |
+|----------|-------|
+| Background Color | `#EEF1F7` |
+| Transparency | `0%` |
+
+The selected color palette provides strong contrast while maintaining a clean and professional Business Intelligence dashboard aesthetic.
 
 ---
 
