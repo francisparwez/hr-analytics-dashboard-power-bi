@@ -18,14 +18,19 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 
 ## ✅ Completed
 
+- Created the Power BI project.
 - Imported the HR Analytics dataset.
-- Cleaned and transformed the data using Power Query.
+- Performed data quality assessment.
 - Removed missing values.
 - Removed duplicate records.
 - Corrected spelling inconsistencies.
 - Validated data types.
+- Loaded the cleaned dataset into Power BI.
 - Designed the dashboard header.
-- Applied dashboard branding and theme colors.
+- Applied a consistent report theme and color palette.
+- Added dashboard branding with a custom logo.
+- Created the Total Employees KPI card.
+- Created the Active Employees KPI card.
 
 ## 🔄 Next Steps
 
@@ -262,6 +267,122 @@ The selected color palette provides strong contrast while maintaining a clean an
 
 ---
 
+# 📊 KPI Card Development
+
+Following the completion of the dashboard layout and branding, the next phase focused on designing the dashboard's **Key Performance Indicator (KPI)** cards.
+
+KPIs provide users with a quick overview of important workforce metrics and serve as the primary summary indicators displayed at the top of the dashboard.
+
+The first two KPI cards developed were:
+
+- 👥 Total Employees
+- ✅ Active Employees
+
+---
+
+## 👥 KPI 1 — Total Employees
+
+A **Card** visual was added from the **Visualizations** pane to display the total number of employees within the organization.
+
+The **EmpID** field was assigned to the card and its aggregation was configured to **Count**, allowing Power BI to calculate the total number of employee records.
+
+### Card Dimensions
+
+| Property | Value |
+|----------|-------|
+| Width | **197 px** |
+| Height | **104 px** |
+
+---
+
+### Card Position
+
+| Property | Value |
+|----------|-------|
+| Horizontal | **10 px** |
+| Vertical | **95 px** |
+
+---
+
+### Card Title
+
+The card title was configured to improve readability and maintain consistency across the dashboard.
+
+| Property | Value |
+|----------|-------|
+| Title | **Total Employees** |
+| Font Size | **20** |
+| Font Weight | **Bold** |
+| Alignment | **Center** |
+
+---
+
+### Card Styling
+
+The following visual styling was applied to create a clean and modern KPI card.
+
+| Property | Value |
+|----------|-------|
+| Background Color | `#F5F8FF` |
+| Border | Enabled |
+| Border Color | `#D9DEE7` |
+| Corner Radius | **12 px** |
+| Shadow | Enabled |
+
+These settings create a card-like appearance while maintaining consistency with the overall dashboard theme.
+
+---
+
+### Callout Value
+
+The card value was formatted to improve visibility.
+
+| Property | Value |
+|----------|-------|
+| Label | Hidden |
+| Font Size | **25** |
+| Font Weight | **Bold** |
+| Alignment | **Right** |
+
+Additionally, the **Inner Border** was disabled to produce a cleaner visual presentation.
+
+---
+
+## ✅ KPI 2 — Active Employees
+
+The second KPI card was created by duplicating the **Total Employees** card to ensure consistent formatting and alignment.
+
+The duplicated card was modified to display the total number of **active employees**.
+
+### Configuration
+
+- Changed the title to **Active Employees**.
+- Used the employee count measure based on **EmpID**.
+- Applied a visual filter where:
+
+| Field | Condition |
+|--------|-----------|
+| Attrition | **No** |
+
+This filter excludes employees who have left the organization, allowing the card to display only the current active workforce.
+
+---
+
+## 📈 Dashboard Progress
+
+At this stage, the dashboard includes:
+
+- Dashboard header
+- Dashboard branding
+- Report theme
+- Dashboard canvas
+- Total Employees KPI
+- Active Employees KPI
+
+The next stage of development will focus on creating additional KPI cards and interactive report visuals.
+
+---
+
 # 🎯 Project Objectives
 
 The completed dashboard will help answer questions such as:
@@ -300,14 +421,17 @@ The completed dashboard will help answer questions such as:
 
 # 📈 Current Status
 
-The HR dataset has been successfully:
+The HR Analytics project has successfully completed the initial stages of dashboard development.
 
-- Imported into Power BI.
-- Cleaned using Power Query.
-- Validated for missing values, duplicates, spelling inconsistencies, and data types.
-- Loaded into the Power BI model for the next stage of development.
+Current accomplishments include:
 
-The next phase of the project will focus on building the relational data model.
+- Data import and preparation using Power Query.
+- Data quality assessment and validation.
+- Dashboard branding and theme customization.
+- Development of the first KPI cards.
+- Display of total workforce and active employee metrics.
+
+The next phase will focus on developing additional KPIs, charts, slicers, and interactive visualizations to provide deeper workforce insights.
 
 ---
 
