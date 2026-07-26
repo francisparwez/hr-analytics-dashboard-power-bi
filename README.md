@@ -27,10 +27,16 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Validated data types.
 - Loaded the cleaned dataset into Power BI.
 - Designed the dashboard header.
-- Applied a consistent report theme and color palette.
+- Applied a consistent report theme and colour palette.
 - Added dashboard branding with a custom logo.
 - Created the Total Employees KPI card.
 - Created the Active Employees KPI card.
+- Created a calculated **AttritionCount** column using Power Query.
+- Developed the Attrition Count KPI card.
+- Created the Attrition Rate (%) DAX measure.
+- Developed the Attrition Rate (%) KPI card.
+- Created the Average Age KPI card.
+- Created the Average Experience KPI card.
 
 ## 🔄 Next Steps
 
@@ -368,18 +374,144 @@ This filter excludes employees who have left the organization, allowing the card
 
 ---
 
+## 📉 KPI 3 – Attrition Count
+
+To calculate the total number of employees who have left the organisation, a new calculated column was first created in **Power Query**.
+
+### Creating the AttritionCount Column
+
+The **EmpID** field was selected and **Transform Data** was used to open the **Power Query Editor**.
+
+From the **Add Column** tab, a **Conditional Column** was created with the following configuration:
+
+| Property | Value |
+|----------|-------|
+| Column Name | **AttritionCount** |
+| Condition | If **Attrition = "Yes"** then **1**, otherwise **0** |
+
+The resulting Power Query expression was:
+
+```powerquery
+= Table.AddColumn(
+    #"Changed Type1",
+    "AttritionCount",
+    each if [Attrition] = "Yes" then 1 else 0
+)
+```
+
+This transformation creates a binary indicator that assigns:
+
+- **1** → Employee has left the organisation.
+- **0** → Employee is currently employed.
+
+After applying the transformation:
+
+- The changes were loaded into Power BI using **Close & Apply**.
+- The **AttritionCount** column data type was updated to **Whole Number** using the **Column Tools** tab.
+
+---
+
+### Creating the KPI Card
+
+A new **Card** visual was added to display the total number of employees who have left the organisation.
+
+Configuration:
+
+- Title: **Attrition Count**
+- Value: **Sum of AttritionCount**
+- Verified that **Filters on this visual** remained set to **(All)** to ensure all employee records were included in the calculation.
+
+This KPI provides an overall count of employee attrition across the organisation.
+
+---
+
+## 📊 KPI 4 – Attrition Rate (%)
+
+To better understand employee turnover, a DAX measure was created to calculate the overall attrition rate.
+
+### DAX Measure
+
+The following measure was created:
+
+```DAX
+Attrition Rate % =
+DIVIDE(
+    SUM('hr-data'[AttritionCount]),
+    SUM('hr-data'[EmployeeCount]),
+    0
+)
+```
+
+The measure was then formatted as:
+
+| Property | Value |
+|----------|-------|
+| Format | Percentage |
+| Decimal Places | **1** |
+
+A new KPI card was created with:
+
+- Title: **Attrition Rate %**
+- Value: **Attrition Rate %** (DAX Measure)
+
+Using the **DIVIDE()** function ensures that division-by-zero errors are handled safely while returning an accurate percentage.
+
+---
+
+## 👤 KPI 5 – Average Age
+
+A KPI card was created to display the average employee age.
+
+Configuration:
+
+| Property | Value |
+|----------|-------|
+| Title | **Average Age** |
+| Field | **Age** |
+| Aggregation | **Average** |
+
+This KPI provides a quick overview of the average workforce age.
+
+---
+
+## 💼 KPI 6 – Average Experience
+
+The final KPI card was developed to display the average employee tenure within the organisation.
+
+Configuration:
+
+| Property | Value |
+|----------|-------|
+| Title | **Avg Experience** |
+| Field | **YearsAtCompany** |
+| Aggregation | **Average** |
+
+This KPI highlights the average number of years employees have remained with the organisation.
+
+---
+
+## 🎨 KPI Enhancements
+
+To improve dashboard readability and visual appeal, custom icons will be added to each KPI card in the next stage of development.
+
+These icons will provide users with immediate visual recognition of each business metric while maintaining a consistent dashboard theme.
+
+---
+
 ## 📈 Dashboard Progress
 
-At this stage, the dashboard includes:
+At this stage, the dashboard includes the following KPI cards:
 
-- Dashboard header
-- Dashboard branding
-- Report theme
-- Dashboard canvas
-- Total Employees KPI
-- Active Employees KPI
+- 👥 Total Employees
+- ✅ Active Employees
+- ❌ Attrition Count
+- 📉 Attrition Rate (%)
+- 👤 Average Age
+- 💼 Average Experience
 
-The next stage of development will focus on creating additional KPI cards and interactive report visuals.
+Together, these KPIs provide a high-level summary of the organisation's workforce and establish the foundation for the analytical dashboard.
+
+The next phase of development will focus on designing interactive charts, visualisations, and additional analytical components.
 
 ---
 
@@ -421,17 +553,18 @@ The completed dashboard will help answer questions such as:
 
 # 📈 Current Status
 
-The HR Analytics project has successfully completed the initial stages of dashboard development.
+The HR Analytics dashboard has successfully completed the initial dashboard design and KPI development stages.
 
 Current accomplishments include:
 
 - Data import and preparation using Power Query.
-- Data quality assessment and validation.
-- Dashboard branding and theme customization.
-- Development of the first KPI cards.
-- Display of total workforce and active employee metrics.
+- Data quality assessment and transformation.
+- Dashboard branding and report theme design.
+- Development of six workforce KPI cards.
+- Creation of the first DAX business metric.
+- Implementation of employee attrition calculations.
 
-The next phase will focus on developing additional KPIs, charts, slicers, and interactive visualizations to provide deeper workforce insights.
+The next phase of the project will focus on enhancing the KPI cards with custom icons before designing interactive charts, visualisations, and report filters.
 
 ---
 
