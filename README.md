@@ -40,10 +40,7 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 
 ## 🔄 Next Steps
 
-- Design KPI cards.
-- Create slicers.
 - Build charts and visualizations.
-- Add DAX measures.
 - Finalize dashboard layout.
 
 ---
