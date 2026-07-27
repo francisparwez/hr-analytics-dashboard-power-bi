@@ -38,6 +38,7 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Created the Average Age KPI card.
 - Created the Average Experience KPI card.
 - Developed the first analytical visualization showing employee attrition by department.
+- Developed the Attrition by Salary Slab clustered bar chart.
 
 ## 🔄 Next Steps
 
@@ -609,6 +610,113 @@ Displaying both employee counts and percentages enables users to compare departm
 
 ---
 
+
+
+---
+
+## 📊 Visualization 2 – Attrition by Salary Slab
+
+The second visualization was developed to analyze employee attrition across different salary ranges within the organisation.
+
+A **Clustered Bar Chart** was selected as it provides an effective comparison of employee counts across salary slabs while also allowing attrition status to be displayed using colour coding.
+
+---
+
+### Data Configuration
+
+The following fields were assigned to the visual.
+
+| Field | Assignment |
+|--------|------------|
+| Y-Axis | **SalarySlab** |
+| X-Axis | **Count of EmpID** |
+| Legend | **Attrition** |
+
+Using **Count of EmpID** allows the chart to display the number of employees within each salary range, while the legend separates employees based on their attrition status.
+
+---
+
+### Visual Dimensions
+
+The visual was positioned alongside the department visualization to maintain a balanced dashboard layout.
+
+| Property | Value |
+|----------|-------|
+| Width | **355 px** |
+| Height | **251 px** |
+| Horizontal Position | **537 px** |
+| Vertical Position | **209 px** |
+
+---
+
+### Chart Title
+
+The title was updated to clearly communicate the purpose of the visualization.
+
+| Property | Value |
+|----------|-------|
+| Title | **Attrition by Salary Slab** |
+
+---
+
+### Consistent Dashboard Styling
+
+To maintain a consistent dashboard appearance, the **Format Painter** tool was used.
+
+Rather than manually reapplying formatting, the styling from the **Attrition by Department** donut chart was copied and applied to the clustered bar chart.
+
+This ensured consistency across:
+
+- Border styling
+- Rounded corners
+- Shadow effects
+- Background formatting
+- Overall visual design
+
+Using the **Format Painter** also improves development efficiency while maintaining a uniform dashboard theme.
+
+---
+
+### Axis & Legend Formatting
+
+Several formatting improvements were applied to improve readability.
+
+#### Y-Axis
+
+- Font Weight: **Bold**
+- Text Colour: **Black**
+
+#### Legend
+
+- Position: **Bottom Centre**
+
+Using the **Attrition** field as the legend allows users to compare employees who remained with the organisation against those who left across each salary slab.
+
+---
+
+### Data Labels
+
+Data labels were enabled to improve readability and reduce the need to reference axis values.
+
+The following formatting was applied:
+
+| Property | Value |
+|----------|-------|
+| Data Labels | Enabled |
+| X-Axis Values | Hidden |
+
+Displaying values directly on each bar allows users to interpret the visualization more quickly while reducing unnecessary visual clutter.
+
+---
+
+## 📊 Business Insight
+
+This visualization helps identify how employee attrition varies across different salary ranges.
+
+By combining salary information with attrition status, users can quickly determine whether employee turnover is concentrated within specific salary bands, supporting workforce planning and compensation analysis.
+
+---
+
 ## 📊 Business Insight
 
 This visualization highlights how employee attrition is distributed across departments, making it easier to identify which departments contribute the largest proportion of employee turnover.
@@ -623,10 +731,11 @@ The dashboard currently includes:
 
 - Dashboard branding and report theme.
 - Six workforce KPI cards.
-- Department-level attrition visualization.
+- Attrition by Department donut chart.
+- Attrition by Salary Slab clustered bar chart.
 - Consistent dashboard styling and formatting.
 
-The next phase of development will focus on building additional charts, interactive report visuals, slicers, and filters to further enhance HR analytics capabilities.
+The next stage of development will focus on creating additional analytical visualizations, report slicers, filters, and interactive dashboard components.
 
 ---
 
@@ -678,7 +787,7 @@ Current accomplishments include:
 - Development of six workforce KPI cards.
 - Creation of the first DAX business metric.
 - Implementation of employee attrition calculations.
-- The dashboard now includes a complete KPI section together with the first analytical visualization.
+- The dashboard now includes six workforce KPI cards and two analytical visualizations, providing both high-level workforce metrics and departmental and salary-based attrition analysis.
 
 The next stage of development will focus on creating additional charts, slicers, filters, and interactive report components to provide deeper workforce insights.
 
@@ -686,15 +795,14 @@ The next stage of development will focus on creating additional charts, slicers,
 
 # 🚀 Future Development
 
-The completed project will include:
+The remaining stages of the project include:
 
 - Additional interactive charts and visualizations
-- Report slicers and filters
+- Dashboard slicers and filters
 - Advanced DAX measures
-- Employee Attrition Analysis
-- Workforce Demographics
-- Department Performance Analysis
-- Dashboard optimization
+- Workforce trend analysis
+- Employee demographics analysis
+- Dashboard optimization and refinement
 
 ---
 
