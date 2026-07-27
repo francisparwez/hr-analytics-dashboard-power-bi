@@ -37,6 +37,7 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Developed the Attrition Rate (%) KPI card.
 - Created the Average Age KPI card.
 - Created the Average Experience KPI card.
+- Developed the first analytical visualization showing employee attrition by department.
 
 ## 🔄 Next Steps
 
@@ -512,6 +513,123 @@ The next phase of development will focus on designing interactive charts, visual
 
 ---
 
+---
+
+# 📈 Data Visualization Development
+
+With the dashboard KPIs completed, the next phase of the project focused on developing interactive visualizations to provide deeper insights into workforce attrition.
+
+The first visualization created was a **Donut Chart**, allowing users to quickly compare employee attrition across different departments.
+
+---
+
+## 🍩 Visualization 1 – Attrition by Department
+
+A **Donut Chart** visual was added from the **Visualizations** pane to display the distribution of employee attrition across each department.
+
+### Data Configuration
+
+The following fields were assigned to the chart.
+
+| Field | Assignment |
+|--------|------------|
+| Legend | **Department** |
+| Values | **Sum of AttritionCount** |
+
+Using the **AttritionCount** column ensures that only employees who have left the organisation are included in the visualization.
+
+---
+
+### Visual Dimensions
+
+To maintain a balanced dashboard layout, the visual was positioned beneath the KPI cards using the following dimensions.
+
+| Property | Value |
+|----------|-------|
+| Width | **350 px** |
+| Height | **249 px** |
+| Horizontal Position | **179 px** |
+| Vertical Position | **210 px** |
+
+---
+
+### Chart Title
+
+The chart title was updated to clearly describe the information being presented.
+
+| Property | Value |
+|----------|-------|
+| Title | **Attrition by Department** |
+| Font Weight | **Bold** |
+
+---
+
+### Visual Styling
+
+To maintain consistency across the dashboard, the chart was formatted using the same design language as the KPI cards.
+
+| Property | Value |
+|----------|-------|
+| Visual Border | Enabled |
+| Border Colour | `#D9DEE7` |
+| Corner Radius | **12 px** |
+| Shadow | Enabled |
+
+Applying identical styling creates a consistent and professional user interface throughout the report.
+
+---
+
+### Legend Formatting
+
+The legend was customised to improve readability.
+
+The following formatting was applied:
+
+- Legend Title: **Disabled**
+- Font Weight: **Bold**
+- Text Colour: **Black**
+
+Removing the legend title reduces unnecessary visual clutter while keeping the department names clear and easy to read.
+
+---
+
+### Detail Labels
+
+The detail labels were formatted to provide concise information without overcrowding the chart.
+
+| Property | Value |
+|----------|-------|
+| Font Size | **10** |
+| Font Weight | **Bold** |
+| Text Colour | **Black** |
+| Value Decimal Places | **0** |
+| Percentage Decimal Places | **0** |
+
+Displaying both employee counts and percentages enables users to compare departments quickly while maintaining readability.
+
+---
+
+## 📊 Business Insight
+
+This visualization highlights how employee attrition is distributed across departments, making it easier to identify which departments contribute the largest proportion of employee turnover.
+
+Combined with the KPI cards developed previously, this chart provides additional context by moving from overall workforce metrics to department-level analysis.
+
+---
+
+## 📈 Dashboard Progress
+
+The dashboard currently includes:
+
+- Dashboard branding and report theme.
+- Six workforce KPI cards.
+- Department-level attrition visualization.
+- Consistent dashboard styling and formatting.
+
+The next phase of development will focus on building additional charts, interactive report visuals, slicers, and filters to further enhance HR analytics capabilities.
+
+---
+
 # 🎯 Project Objectives
 
 The completed dashboard will help answer questions such as:
@@ -560,8 +678,9 @@ Current accomplishments include:
 - Development of six workforce KPI cards.
 - Creation of the first DAX business metric.
 - Implementation of employee attrition calculations.
+- The dashboard now includes a complete KPI section together with the first analytical visualization.
 
-The next phase of the project will focus on enhancing the KPI cards with custom icons before designing interactive charts, visualisations, and report filters.
+The next stage of development will focus on creating additional charts, slicers, filters, and interactive report components to provide deeper workforce insights.
 
 ---
 
@@ -569,14 +688,13 @@ The next phase of the project will focus on enhancing the KPI cards with custom 
 
 The completed project will include:
 
-- Relational Data Model
-- DAX Measures
-- KPI Cards
-- Interactive Filters
+- Additional interactive charts and visualizations
+- Report slicers and filters
+- Advanced DAX measures
 - Employee Attrition Analysis
 - Workforce Demographics
 - Department Performance Analysis
-- HR Analytics Dashboard
+- Dashboard optimization
 
 ---
 
