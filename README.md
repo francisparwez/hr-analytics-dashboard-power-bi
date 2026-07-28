@@ -39,6 +39,7 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Created the Average Experience KPI card.
 - Developed the first analytical visualization showing employee attrition by department.
 - Developed the Attrition by Salary Slab clustered bar chart.
+- Developed the Attrition by Job Role & Job Satisfaction matrix visualization.
 
 ## 🔄 Next Steps
 
@@ -709,6 +710,108 @@ Displaying values directly on each bar allows users to interpret the visualizati
 
 ---
 
+---
+
+## 📋 Visualization 3 – Attrition by Job Role & Job Satisfaction
+
+The third visualization was developed to analyse employee attrition across different job roles while simultaneously comparing employee job satisfaction levels.
+
+A **Matrix** visual was selected because it provides a compact way of displaying multiple dimensions within a single report, allowing users to compare attrition counts across both job roles and satisfaction ratings.
+
+---
+
+### Data Configuration
+
+The following fields were assigned to the matrix.
+
+| Field | Assignment |
+|--------|------------|
+| Rows | **JobRole** |
+| Columns | **JobSatisfaction** |
+| Values | **Sum of AttritionCount** |
+
+Using the **AttritionCount** field ensures that the matrix displays only employees who have left the organisation, while the **JobSatisfaction** column enables comparisons across satisfaction levels for each job role.
+
+---
+
+### Visual Dimensions
+
+To maintain a balanced dashboard layout, the matrix was positioned alongside the existing visualizations.
+
+| Property | Value |
+|----------|-------|
+| Width | **371 px** |
+| Height | **251 px** |
+| Horizontal Position | **898 px** |
+| Vertical Position | **209 px** |
+
+---
+
+### Chart Title
+
+The title was updated to clearly describe the purpose of the visualization.
+
+| Property | Value |
+|----------|-------|
+| Title | **Attrition by Job Role & Job Satisfaction** |
+
+---
+
+### Consistent Dashboard Styling
+
+To maintain a consistent visual theme throughout the dashboard, the **Format Painter** tool was used.
+
+Formatting from the previously created visualization was copied and applied to the matrix visual, ensuring consistency across:
+
+- Border styling
+- Rounded corners
+- Shadow effects
+- Background formatting
+- Overall dashboard appearance
+
+Applying identical formatting improves dashboard consistency while reducing repetitive formatting work.
+
+---
+
+### Conditional Formatting
+
+To improve data interpretation, **Background Colour** was enabled within **Cell Elements**.
+
+Conditional formatting automatically highlights values using colour intensity, making it easier to identify job roles with comparatively higher or lower employee attrition across different job satisfaction levels.
+
+---
+
+### Header Formatting
+
+Both column and row headers were customised to improve readability.
+
+#### Column Headers
+
+| Property | Value |
+|----------|-------|
+| Font Weight | **Bold** |
+| Text Colour | **Black** |
+
+#### Row Headers
+
+| Property | Value |
+|----------|-------|
+| Font Weight | **Bold** |
+| Text Colour | **Black** |
+| Text Size | **9** |
+
+Reducing the row header text size allows more job roles to be displayed while maintaining a clean and compact layout.
+
+---
+
+## 📊 Business Insight
+
+This visualization provides a multi-dimensional view of employee attrition by combining job role with job satisfaction levels.
+
+It enables users to identify whether particular job roles experience higher attrition within specific satisfaction ratings, helping HR teams uncover potential relationships between employee satisfaction and workforce turnover.
+
+---
+
 ## 📊 Business Insight
 
 This visualization helps identify how employee attrition varies across different salary ranges.
@@ -727,12 +830,15 @@ Combined with the KPI cards developed previously, this chart provides additional
 
 ## 📈 Dashboard Progress
 
+## 📈 Dashboard Progress
+
 The dashboard currently includes:
 
 - Dashboard branding and report theme.
 - Six workforce KPI cards.
 - Attrition by Department donut chart.
 - Attrition by Salary Slab clustered bar chart.
+- Attrition by Job Role & Job Satisfaction matrix.
 - Consistent dashboard styling and formatting.
 
 The next stage of development will focus on creating additional analytical visualizations, report slicers, filters, and interactive dashboard components.
@@ -777,19 +883,18 @@ The completed dashboard will help answer questions such as:
 
 # 📈 Current Status
 
-The HR Analytics dashboard has successfully completed the initial dashboard design and KPI development stages.
+# 📈 Current Status
+
+The HR Analytics dashboard now includes a professionally designed dashboard interface, six workforce KPI cards, and three analytical visualizations.
 
 Current accomplishments include:
 
-- Data import and preparation using Power Query.
-- Data quality assessment and transformation.
-- Dashboard branding and report theme design.
-- Development of six workforce KPI cards.
-- Creation of the first DAX business metric.
-- Implementation of employee attrition calculations.
-- The dashboard now includes six workforce KPI cards and two analytical visualizations, providing both high-level workforce metrics and departmental and salary-based attrition analysis.
+- Data preparation and transformation using Power Query.
+- Dashboard branding and report theme customization.
+- KPI development using Power BI Cards.
+- Creation of analytical visualizations for departmental attrition, salary-based attrition, and job role satisfaction analysis.
 
-The next stage of development will focus on creating additional charts, slicers, filters, and interactive report components to provide deeper workforce insights.
+The next stage of development will focus on creating additional analytical visualizations, report slicers, interactive filtering, and dashboard refinement.
 
 ---
 
@@ -800,8 +905,8 @@ The remaining stages of the project include:
 - Additional interactive charts and visualizations
 - Dashboard slicers and filters
 - Advanced DAX measures
-- Workforce trend analysis
-- Employee demographics analysis
+- Workforce demographics analysis
+- Employee performance insights
 - Dashboard optimization and refinement
 
 ---
