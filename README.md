@@ -41,6 +41,7 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Developed the Attrition by Salary Slab clustered bar chart.
 - Developed the Attrition by Job Role & Job Satisfaction matrix visualization.
 - Developed the Age Group Distribution stacked column chart.
+- Developed the Attrition by Gender pie chart.
 
 ## 🔄 Next Steps
 
@@ -905,16 +906,99 @@ Understanding the distribution of employees across age categories helps HR teams
 
 ---
 
+---
+
+## 🥧 Visualization 5 – Attrition by Gender
+
+The fifth visualization was developed to analyse employee attrition based on gender.
+
+A **Pie Chart** was selected to provide a simple comparison of attrition between male and female employees, making it easy to identify the proportion of employees leaving the organisation by gender.
+
+---
+
+### Data Configuration
+
+The following fields were assigned to the visual.
+
+| Field | Assignment |
+|--------|------------|
+| Legend | **Gender** |
+| Values | **Sum of AttritionCount** |
+
+Using the **AttritionCount** field ensures that only employees who have left the organisation are included in the visualization.
+
+---
+
+### Visual Dimensions
+
+The visual was positioned alongside the **Age Group Distribution** chart to maintain a balanced and visually appealing dashboard layout.
+
+| Property | Value |
+|----------|-------|
+| Width | **234 px** |
+| Height | **240 px** |
+| Horizontal Position | **448 px** |
+| Vertical Position | **469 px** |
+
+---
+
+### Chart Title
+
+The chart title was updated to clearly communicate the purpose of the visualization.
+
+| Property | Value |
+|----------|-------|
+| Title | **Attrition by Gender** |
+
+---
+
+### Consistent Dashboard Styling
+
+To maintain a consistent dashboard design, the **Format Painter** tool was used.
+
+Formatting from one of the existing dashboard visualizations was copied and applied to the pie chart, ensuring consistency across:
+
+- Border styling
+- Rounded corners
+- Shadow effects
+- Background formatting
+- Overall dashboard appearance
+
+Using the **Format Painter** maintains a professional and consistent visual theme while improving development efficiency.
+
+---
+
+### Legend Formatting
+
+The legend was positioned beneath the chart to maximise available space while maintaining readability.
+
+| Property | Value |
+|----------|-------|
+| Position | **Bottom Centre** |
+
+Positioning the legend below the chart creates a cleaner layout and allows users to easily distinguish between employee gender categories.
+
+---
+
+## 📊 Business Insight
+
+This visualization provides a clear comparison of employee attrition between male and female employees.
+
+Understanding attrition by gender enables HR teams to identify demographic trends, evaluate workforce diversity, and support data-driven decision-making related to employee retention strategies and organisational planning.
+
+---
+
 ## 📈 Dashboard Progress
 
 The dashboard currently includes:
 
-- Dashboard branding and report theme.
+- Professional dashboard branding and report theme.
 - Six workforce KPI cards.
 - 🍩 Attrition by Department donut chart.
 - 📊 Attrition by Salary Slab clustered bar chart.
 - 📋 Attrition by Job Role & Job Satisfaction matrix.
 - 📊 Age Group Distribution stacked column chart.
+- 🥧 Attrition by Gender pie chart.
 - Consistent dashboard styling and formatting.
 
 The next stage of development will focus on creating additional analytical visualizations, report slicers, filters, and interactive dashboard components.
@@ -967,7 +1051,7 @@ Current accomplishments include:
 - Data cleaning and transformation using Power Query.
 - Dashboard layout and branding.
 - Workforce KPI development.
-- Development of four analytical visualizations supporting workforce and attrition analysis.
+- Development of five analytical visualizations supporting workforce demographics and employee attrition analysis.
 - Dashboard styling using a consistent visual design.
 
 The next phase of development will focus on expanding the analytical visualizations, adding report slicers, improving interactivity, and finalizing the dashboard for deployment.
