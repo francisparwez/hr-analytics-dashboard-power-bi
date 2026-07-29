@@ -42,6 +42,7 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Developed the Attrition by Job Role & Job Satisfaction matrix visualization.
 - Developed the Age Group Distribution stacked column chart.
 - Developed the Attrition by Gender pie chart.
+- Developed the Attrition Trend by Experience area chart.
 
 ## 🔄 Next Steps
 
@@ -988,6 +989,87 @@ Understanding attrition by gender enables HR teams to identify demographic trend
 
 ---
 
+## 📈 Visualization 6 – Attrition Trend by Experience
+
+The sixth visualization was developed to analyze how employee attrition varies according to employees' total years of experience.
+
+An **Area Chart** was selected because it effectively illustrates trends and patterns over a continuous numerical scale, making it easier to identify experience levels where employee attrition is more common.
+
+---
+
+### Data Configuration
+
+The following fields were assigned to the visual.
+
+| Field | Assignment |
+|--------|------------|
+| X-Axis | **TotalExperience (Years)** |
+| Secondary Y-Axis | **Sum of AttritionCount** |
+
+Using the **AttritionCount** field ensures that the visualization represents only employees who have left the organisation, while **TotalExperience (Years)** provides insight into attrition across different experience levels.
+
+---
+
+### Visual Dimensions
+
+The chart was positioned alongside the existing demographic visualizations to maintain a clean and balanced dashboard layout.
+
+| Property | Value |
+|----------|-------|
+| Width | **239 px** |
+| Height | **242 px** |
+| Horizontal Position | **689 px** |
+| Vertical Position | **469 px** |
+
+---
+
+### Chart Title
+
+The chart title was updated to clearly communicate the purpose of the visualization.
+
+| Property | Value |
+|----------|-------|
+| Title | **Attrition Trend By Experience** |
+
+---
+
+### Axis Formatting
+
+To improve readability and reduce unnecessary visual clutter, the following formatting changes were applied:
+
+| Property | Configuration |
+|----------|---------------|
+| Y-Axis Title | Disabled |
+| Secondary Y-Axis Values | Hidden |
+
+Removing unnecessary axis elements allows users to focus on the overall attrition trend without distraction.
+
+---
+
+### Consistent Dashboard Styling
+
+To maintain consistency across the dashboard, the **Format Painter** tool was used.
+
+Formatting from an existing visualization was copied and applied to the area chart, ensuring consistency across:
+
+- Border styling
+- Rounded corners
+- Shadow effects
+- Background formatting
+- Overall dashboard appearance
+
+Using the **Format Painter** helps maintain a professional dashboard design while improving development efficiency.
+
+---
+
+## 📊 Business Insight
+
+This visualization highlights how employee attrition changes across different experience levels within the organization.
+
+By analyzing attrition trends based on employee experience, HR teams can identify whether turnover is more common among newer employees or experienced professionals, supporting better retention strategies, workforce planning, and career development initiatives.
+
+---
+
 ## 📈 Dashboard Progress
 
 The dashboard currently includes:
@@ -999,6 +1081,7 @@ The dashboard currently includes:
 - 📋 Attrition by Job Role & Job Satisfaction matrix.
 - 📊 Age Group Distribution stacked column chart.
 - 🥧 Attrition by Gender pie chart.
+- 📈 Attrition Trend by Experience area chart.
 - Consistent dashboard styling and formatting.
 
 The next stage of development will focus on creating additional analytical visualizations, report slicers, filters, and interactive dashboard components.
@@ -1051,7 +1134,7 @@ Current accomplishments include:
 - Data cleaning and transformation using Power Query.
 - Dashboard layout and branding.
 - Workforce KPI development.
-- Development of five analytical visualizations supporting workforce demographics and employee attrition analysis.
+- Development of six analytical visualizations supporting workforce demographics, employee attrition, and experience trend analysis.
 - Dashboard styling using a consistent visual design.
 
 The next phase of development will focus on expanding the analytical visualizations, adding report slicers, improving interactivity, and finalizing the dashboard for deployment.
