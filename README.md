@@ -8,7 +8,7 @@
 
 This project aims to build an interactive HR Analytics dashboard using Microsoft Power BI.
 
-The project follows a structured Business Intelligence workflow, beginning with importing the dataset, cleaning and transforming the data using Power Query, building a relational data model, creating DAX measures, and finally designing an interactive dashboard.
+The project follows a structured Business Intelligence workflow, beginning with importing the dataset, cleaning and transforming the data using Power Query, creating calculated columns and DAX measures, designing an interactive dashboard, and developing analytical visualizations to generate meaningful HR insights.
 
 Each major milestone is maintained in a separate Git branch to demonstrate an organized and version-controlled development process.
 
@@ -40,11 +40,15 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Developed the first analytical visualization showing employee attrition by department.
 - Developed the Attrition by Salary Slab clustered bar chart.
 - Developed the Attrition by Job Role & Job Satisfaction matrix visualization.
+- Developed the Age Group Distribution stacked column chart.
 
 ## 🔄 Next Steps
 
-- Build charts and visualizations.
-- Finalize dashboard layout.
+- Continue developing analytical visualizations.
+- Add interactive slicers and report filters.
+- Enhance dashboard interactivity.
+- Optimize dashboard layout and spacing.
+- Finalize the HR Analytics dashboard.
 
 ---
 
@@ -492,13 +496,13 @@ This KPI highlights the average number of years employees have remained with the
 
 ## 🎨 KPI Enhancements
 
-To improve dashboard readability and visual appeal, custom icons will be added to each KPI card in the next stage of development.
+Custom icons were added to each KPI card to improve visual recognition and enhance the overall user experience.
 
-These icons will provide users with immediate visual recognition of each business metric while maintaining a consistent dashboard theme.
+Using intuitive icons allows users to identify key workforce metrics more quickly while maintaining a consistent dashboard design.
 
 ---
 
-## 📈 Dashboard Progress
+## 📈 KPI Development Progress
 
 At this stage, the dashboard includes the following KPI cards:
 
@@ -512,8 +516,6 @@ At this stage, the dashboard includes the following KPI cards:
 Together, these KPIs provide a high-level summary of the organisation's workforce and establish the foundation for the analytical dashboard.
 
 The next phase of development will focus on designing interactive charts, visualisations, and additional analytical components.
-
----
 
 ---
 
@@ -611,7 +613,24 @@ Displaying both employee counts and percentages enables users to compare departm
 
 ---
 
+## 📊 Business Insight
 
+This visualization highlights how employee attrition is distributed across departments, making it easier to identify which departments contribute the largest proportion of employee turnover.
+
+Combined with the KPI cards developed previously, this chart provides additional context by moving from overall workforce metrics to department-level analysis.
+
+---
+
+## 📈 Visualization Development Progress
+
+The dashboard currently includes:
+
+- Professional dashboard branding and report theme.
+- Six workforce KPI cards.
+- Department-level attrition visualization.
+- Consistent dashboard styling and formatting.
+
+The next phase of development will focus on building additional charts, interactive report visuals, slicers, and filters to further enhance HR analytics capabilities.
 
 ---
 
@@ -709,6 +728,12 @@ The following formatting was applied:
 Displaying values directly on each bar allows users to interpret the visualization more quickly while reducing unnecessary visual clutter.
 
 ---
+
+## 📊 Business Insight
+
+This visualization helps identify how employee attrition varies across different salary ranges.
+
+By combining salary information with attrition status, users can quickly determine whether employee turnover is concentrated within specific salary bands, supporting workforce planning and compensation analysis.
 
 ---
 
@@ -812,23 +837,73 @@ It enables users to identify whether particular job roles experience higher attr
 
 ---
 
-## 📊 Business Insight
+## 📊 Visualization 4 – Age Group Distribution
 
-This visualization helps identify how employee attrition varies across different salary ranges.
+The fourth visualization was developed to analyze the distribution of employees across different age groups within the organisation.
 
-By combining salary information with attrition status, users can quickly determine whether employee turnover is concentrated within specific salary bands, supporting workforce planning and compensation analysis.
+A **Stacked Column Chart** was selected to clearly display the number of employees in each predefined age category, providing an overview of the organisation's workforce demographics.
+
+---
+
+### Data Configuration
+
+The following fields were assigned to the visual.
+
+| Field | Assignment |
+|--------|------------|
+| X-Axis | **AgeGroup** |
+| Y-Axis | **Sum of EmployeeCount** |
+
+Using the **EmployeeCount** field enables the chart to display the total number of employees within each age group.
+
+---
+
+### Visual Dimensions
+
+To maintain a clean and balanced dashboard layout, the visualization was positioned beneath the existing charts.
+
+| Property | Value |
+|----------|-------|
+| Width | **261 px** |
+| Height | **235 px** |
+| Horizontal Position | **179 px** |
+| Vertical Position | **469 px** |
+
+---
+
+### Chart Title
+
+The chart title was updated to clearly communicate the purpose of the visualization.
+
+| Property | Value |
+|----------|-------|
+| Title | **Age Group Distribution** |
+
+---
+
+### Consistent Dashboard Styling
+
+To maintain consistency across the dashboard, the **Format Painter** tool was used.
+
+Formatting from one of the existing visualizations was copied and applied to the stacked column chart, ensuring consistency across:
+
+- Border styling
+- Rounded corners
+- Shadow effects
+- Background formatting
+- Overall dashboard appearance
+
+Using the Format Painter helps maintain a professional design while improving development efficiency.
 
 ---
 
 ## 📊 Business Insight
 
-This visualization highlights how employee attrition is distributed across departments, making it easier to identify which departments contribute the largest proportion of employee turnover.
+This visualization provides a clear overview of the organisation's workforce demographics by showing the number of employees within each age group.
 
-Combined with the KPI cards developed previously, this chart provides additional context by moving from overall workforce metrics to department-level analysis.
+Understanding the distribution of employees across age categories helps HR teams assess workforce balance, identify demographic trends, and support strategic planning for recruitment, succession planning, employee development, and long-term workforce management.
 
 ---
-
-## 📈 Dashboard Progress
 
 ## 📈 Dashboard Progress
 
@@ -836,9 +911,10 @@ The dashboard currently includes:
 
 - Dashboard branding and report theme.
 - Six workforce KPI cards.
-- Attrition by Department donut chart.
-- Attrition by Salary Slab clustered bar chart.
-- Attrition by Job Role & Job Satisfaction matrix.
+- 🍩 Attrition by Department donut chart.
+- 📊 Attrition by Salary Slab clustered bar chart.
+- 📋 Attrition by Job Role & Job Satisfaction matrix.
+- 📊 Age Group Distribution stacked column chart.
 - Consistent dashboard styling and formatting.
 
 The next stage of development will focus on creating additional analytical visualizations, report slicers, filters, and interactive dashboard components.
@@ -876,6 +952,7 @@ The completed dashboard will help answer questions such as:
 
 - Microsoft Power BI
 - Power Query
+- DAX (Data Analysis Expressions)
 - Git
 - GitHub
 
@@ -883,18 +960,17 @@ The completed dashboard will help answer questions such as:
 
 # 📈 Current Status
 
-# 📈 Current Status
-
-The HR Analytics dashboard now includes a professionally designed dashboard interface, six workforce KPI cards, and three analytical visualizations.
+The HR Analytics dashboard has progressed from data preparation to interactive dashboard development.
 
 Current accomplishments include:
 
-- Data preparation and transformation using Power Query.
-- Dashboard branding and report theme customization.
-- KPI development using Power BI Cards.
-- Creation of analytical visualizations for departmental attrition, salary-based attrition, and job role satisfaction analysis.
+- Data cleaning and transformation using Power Query.
+- Dashboard layout and branding.
+- Workforce KPI development.
+- Development of four analytical visualizations supporting workforce and attrition analysis.
+- Dashboard styling using a consistent visual design.
 
-The next stage of development will focus on creating additional analytical visualizations, report slicers, interactive filtering, and dashboard refinement.
+The next phase of development will focus on expanding the analytical visualizations, adding report slicers, improving interactivity, and finalizing the dashboard for deployment.
 
 ---
 
@@ -902,12 +978,13 @@ The next stage of development will focus on creating additional analytical visua
 
 The remaining stages of the project include:
 
-- Additional interactive charts and visualizations
-- Dashboard slicers and filters
-- Advanced DAX measures
-- Workforce demographics analysis
-- Employee performance insights
-- Dashboard optimization and refinement
+- Additional analytical visualizations
+- Interactive slicers and report filters
+- Dashboard navigation enhancements
+- Advanced DAX calculations
+- Workforce demographic analysis
+- Employee retention and workforce trend analysis
+- Dashboard optimization and final polishing
 
 ---
 
