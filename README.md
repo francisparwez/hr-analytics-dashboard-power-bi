@@ -1,4 +1,8 @@
 # 👥 HR Analytics Dashboard (Power BI)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-0078D4?style=for-the-badge)
+![Power Query](https://img.shields.io/badge/Power_Query-217346?style=for-the-badge)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 > An end-to-end Power BI project focused on analyzing Human Resources (HR) data to uncover insights into employee demographics, attrition, job satisfaction, compensation, and workforce trends.
 
@@ -8,51 +12,50 @@
 
 This project aims to build an interactive HR Analytics dashboard using Microsoft Power BI.
 
-The project follows a structured Business Intelligence workflow, beginning with importing the dataset, cleaning and transforming the data using Power Query, creating calculated columns and DAX measures, designing an interactive dashboard, and developing analytical visualizations to generate meaningful HR insights.
+The project follows a structured Business Intelligence workflow, beginning with importing the dataset, cleaning and transforming the data using Power Query, creating DAX measures and calculated columns, designing an interactive dashboard, and developing analytical visualizations to generate meaningful HR insights.
 
 Each major milestone is maintained in a separate Git branch to demonstrate an organized and version-controlled development process.
 
 ---
 
-# 📈 Current Progress
+# 📸 Dashboard Preview
+
+![HR Analytics Dashboard](images/dashboard-preview.jpg)
+
+---
+
+# 📊 Key Dashboard Insights
+
+This dashboard enables HR teams to quickly answer questions such as:
+
+- 👥 Which departments experience the highest employee attrition?
+- 💰 Does salary influence employee turnover?
+- 😊 How does job satisfaction relate to attrition?
+- 👨‍💼 Which job roles have the greatest workforce loss?
+- 📈 How does employee experience impact attrition?
+- 👤 What is the age distribution of the workforce?
+- 🏢 Which departments have the largest workforce?
+
+---
+
+# 📈 Project Status
 
 ## ✅ Completed
 
 - Created the Power BI project.
-- Imported the HR Analytics dataset.
-- Performed data quality assessment.
-- Removed missing values.
-- Removed duplicate records.
-- Corrected spelling inconsistencies.
-- Validated data types.
-- Loaded the cleaned dataset into Power BI.
-- Designed the dashboard header.
-- Applied a consistent report theme and color palette.
-- Added dashboard branding with a custom logo.
-- Created the Total Employees KPI card.
-- Created the Active Employees KPI card.
-- Created a calculated **AttritionCount** column using Power Query.
-- Developed the Attrition Count KPI card.
-- Created the Attrition Rate (%) DAX measure.
-- Developed the Attrition Rate (%) KPI card.
-- Created the Average Age KPI card.
-- Created the Average Experience KPI card.
-- Developed the first analytical visualization showing employee attrition by department.
-- Developed the Attrition by Salary Slab clustered bar chart.
-- Developed the Attrition by Job Role & Job Satisfaction matrix visualization.
-- Developed the Age Group Distribution stacked column chart.
-- Developed the Attrition by Gender pie chart.
-- Developed the Attrition Trend by Experience area chart.
-- Developed the Department-Wise Employee Count funnel chart.
-- Developed the interactive Department slicer.
+- Imported and cleaned the HR Analytics dataset.
+- Performed data validation and transformation using Power Query.
+- Built six KPI cards.
+- Developed seven analytical visualizations.
+- Added interactive Department and Age Group slicers.
+- Applied consistent dashboard styling and branding.
+- Completed the HR Analytics dashboard.
 
-## 🔄 Next Steps
+## ✅ Project Completed
 
-- Develop the Age Group slicer.
-- Finalize interactive dashboard filters.
-- Optimize dashboard layout and spacing.
-- Perform final dashboard testing.
-- Publish the completed HR Analytics dashboard.
+The HR Analytics Dashboard has now been fully developed, including data preparation, KPI creation, analytical visualizations, and interactive dashboard filtering.
+
+The completed dashboard provides users with an interactive Business Intelligence solution for exploring employee demographics, workforce distribution, compensation, experience, and attrition trends.
 
 ---
 
@@ -63,6 +66,9 @@ HR-Analytics-Dashboard/
 │
 ├── data/
 │   └── hr-data.csv
+│
+├── images/
+│   └── dashboard-preview.jpg
 │
 ├── hr-analytics-dashboard.pbix
 │
@@ -120,7 +126,7 @@ The dataset contains employee information including:
 - Years Since Last Promotion
 - Years With Current Manager
 
-These fields will later be used to build KPIs and business intelligence reports.
+These fields were used to create KPIs, DAX measures, interactive visualizations, and dashboard filters.
 
 ---
 
@@ -1156,20 +1162,16 @@ These insights support workforce planning, departmental resource allocation, and
 
 ## 📈 Dashboard Progress
 
-The dashboard currently includes:
+The completed dashboard includes:
 
 - Professional dashboard branding and report theme.
 - Six workforce KPI cards.
-- 🍩 Attrition by Department donut chart.
-- 📊 Attrition by Salary Slab clustered bar chart.
-- 📋 Attrition by Job Role & Job Satisfaction matrix.
-- 📊 Age Group Distribution stacked column chart.
-- 🥧 Attrition by Gender pie chart.
-- 📈 Attrition Trend by Experience area chart.
-- 🔻 Department-Wise Employee Count funnel chart.
+- Seven analytical visualizations.
+- Two interactive report slicers.
+- Cross-filtering across all dashboard visuals.
 - Consistent dashboard styling and formatting.
 
-The next stage of development will focus on creating interactive slicers, report filters, and final dashboard enhancements to improve user experience and analytical capabilities.
+The HR Analytics Dashboard is now complete and ready for analysis, presentation, and portfolio demonstration.
 
 ---
 
@@ -1268,6 +1270,7 @@ The selected styling provides strong visual contrast, making department selectio
 
 ---
 
+
 ## 📊 Business Insight
 
 The Department slicer allows users to instantly filter every KPI and visualization across the dashboard for a selected department.
@@ -1276,15 +1279,71 @@ This interactive feature enables HR teams to perform department-specific analysi
 
 ---
 
+## 🎯 Slicer 2 – Age Group
+
+After completing the Department slicer, a second slicer was developed to allow users to filter dashboard insights by employee age groups.
+
+To maintain visual consistency and reduce development time, the existing Department slicer was duplicated and reconfigured.
+
+---
+
+### Data Configuration
+
+The original **Department** field was removed and replaced with the **AgeGroup** field.
+
+| Field | Assignment |
+|--------|------------|
+| Field | **AgeGroup** |
+
+---
+
+### Visual Dimensions
+
+The slicer was positioned inside the dashboard header to provide quick access while preserving the overall layout.
+
+| Property | Value |
+|----------|-------|
+| Width | **361 px** |
+| Height | **68 px** |
+| Horizontal Position | **898 px** |
+| Vertical Position | **12 px** |
+
+---
+
+### Visual Customization
+
+To integrate the slicer seamlessly into the dashboard header, several styling adjustments were made.
+
+| Property | Value |
+|----------|-------|
+| Header Text Colour | **White** |
+| Background | Disabled |
+| Visual Border | Disabled |
+
+Removing the background and border allows the slicer to blend naturally into the dashboard header while maintaining readability.
+
+---
+
+## 📊 Business Insight
+
+The Age Group slicer enables users to instantly analyze workforce metrics and attrition trends for specific employee age groups.
+
+Combined with the Department slicer, users can perform multi-dimensional analysis by filtering the dashboard based on both department and employee age.
+
+---
+
 ## 🎛 Interactive Dashboard Progress
 
 The dashboard now includes:
 
 - 🎯 Department slicer
-- Dynamic cross-filtering across all visualizations
-- Consistent interactive styling
+- 🎯 Age Group slicer
+- Dynamic cross-filtering across all KPIs and visualizations
+- Fully interactive report experience
+- Consistent dashboard styling
 
-The next step is to develop the **Age Group slicer**, completing the dashboard's interactive filtering capabilities before moving on to final dashboard refinements.
+The dashboard's interactive filtering functionality is now complete.
+
 
 # 🎯 Project Objectives
 
@@ -1302,13 +1361,23 @@ The completed dashboard will help answer questions such as:
 
 # 🌿 Git Branch Workflow
 
+Each major stage of the project was developed in its own Git branch before being merged into the `main` branch. This workflow provides a clear development history and demonstrates a structured, version-controlled approach to building the dashboard.
+
 | Branch | Description |
 |----------|-------------|
 | `01-blank-project` | Initial Power BI project setup |
-| `02-importing-dataset_transforming-it` | Imported, cleaned, and transformed the HR dataset using Power Query *(Current Branch)* |
-| `03-building-relational-model` | Create the relational data model |
-| `04-add-dax-measures` | Create KPIs and business metrics |
-| `05-designing-dynamic-dashboard` | Design the final interactive dashboard |
+| `02-importing-dataset-transforming-it` | Imported, cleaned, and transformed the HR dataset using Power Query |
+| `03-designing-dashboard-layout` | Designed the dashboard header, branding, and report theme |
+| `04-building-kpi-cards` | Created employee KPI cards and workforce metrics using DAX and calculated columns |
+| `05-building-visualizations` | Built the **Attrition by Department** donut chart |
+| `06-building-salary-slab-attrition-visualizations` | Built the **Attrition by Salary Slab** clustered bar chart |
+| `07-building-job-role-satisfaction-visualization` | Built the **Attrition by Job Role & Job Satisfaction** matrix visualization |
+| `08-building-age-group-distribution-visualization` | Built the **Age Group Distribution** stacked column chart |
+| `09-building-gender-attrition-visualization` | Built the **Attrition by Gender** pie chart |
+| `10-building-experience-trend-visualization` | Built the **Attrition Trend by Experience** area chart |
+| `11-building-department-employee-count-visualization` | Built the **Department-Wise Employee Count** funnel chart |
+| `12-building-department-slicer` | Added an interactive Department slicer |
+| `13-building-age-group-slicer` | Added an interactive Age Group slicer and completed the dashboard |
 | `main` | Final completed project |
 
 ---
@@ -1325,31 +1394,32 @@ The completed dashboard will help answer questions such as:
 
 # 📈 Current Status
 
-The HR Analytics dashboard has progressed from data preparation to interactive dashboard development.
+The HR Analytics Dashboard has been successfully completed.
 
-Current accomplishments include:
+The project includes:
 
 - Data cleaning and transformation using Power Query.
-- Dashboard layout and branding.
-- Workforce KPI development.
-- Development of seven analytical visualizations covering workforce demographics, employee distribution, attrition analysis, and experience trends.
-- Implementation of the first interactive dashboard slicer for department-level filtering.
-- Dashboard styling using a consistent visual design.
+- KPI development using calculated columns and DAX measures.
+- Seven analytical dashboard visualizations.
+- Interactive Department and Age Group slicers.
+- Fully interactive report filtering.
+- Professional dashboard branding and visual styling.
 
-The dashboard has now entered the interactive development phase, with report slicers being added to improve user experience before final dashboard testing and deployment.
+The dashboard is now ready for business analysis, portfolio presentation, and future enhancements and feature extensions if required.
 
 ---
 
 # 🚀 Future Development
 
-The remaining stages of the project include:
+Potential future enhancements include:
 
-- Complete the remaining interactive slicers and report filters.
-- Enhance dashboard interactivity and user experience.
-- Optimize dashboard layout, spacing, and visual alignment.
-- Improve report performance and responsiveness.
-- Conduct final dashboard testing and validation.
-- Publish and document the completed Power BI dashboard.
+- Additional HR KPIs and advanced DAX measures
+- Drill-through report pages
+- Custom report tooltips
+- Bookmark navigation
+- Mobile layout optimization
+- Power BI Service deployment
+- Scheduled data refresh
 
 ---
 
