@@ -44,14 +44,15 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Developed the Attrition by Gender pie chart.
 - Developed the Attrition Trend by Experience area chart.
 - Developed the Department-Wise Employee Count funnel chart.
+- Developed the interactive Department slicer.
 
 ## 🔄 Next Steps
 
-- Continue developing analytical visualizations.
-- Add interactive slicers and report filters.
-- Enhance dashboard interactivity.
+- Develop the Age Group slicer.
+- Finalize interactive dashboard filters.
 - Optimize dashboard layout and spacing.
-- Finalize the HR Analytics dashboard.
+- Perform final dashboard testing.
+- Publish the completed HR Analytics dashboard.
 
 ---
 
@@ -1172,6 +1173,119 @@ The next stage of development will focus on creating interactive slicers, report
 
 ---
 
+# 🎛 Interactive Dashboard Features
+
+With all analytical visualizations completed, the next phase of the project focused on improving dashboard interactivity.
+
+Power BI slicers were introduced to allow users to dynamically filter dashboard visuals and KPIs, making it easier to explore HR insights from different perspectives.
+
+The first interactive component developed was a **Department Slicer**, enabling users to filter the entire dashboard by department.
+
+---
+
+## 🎯 Slicer 1 – Department
+
+A **Slicer** visual was added from the **Visualizations** pane and configured to filter the dashboard using employee departments.
+
+### Data Configuration
+
+The following field was assigned to the slicer.
+
+| Field | Assignment |
+|--------|------------|
+| Field | **Department** |
+
+---
+
+### Slicer Style
+
+To improve the user experience, the slicer style was changed from the default list layout to **Tile**.
+
+Using tile buttons makes department selection more intuitive while providing a cleaner and more modern interface.
+
+---
+
+### Visual Dimensions
+
+The slicer was positioned along the left side of the dashboard to provide easy access without obstructing any analytical visuals.
+
+| Property | Value |
+|----------|-------|
+| Width | **165 px** |
+| Height | **500 px** |
+| Horizontal Position | **9 px** |
+| Vertical Position | **209 px** |
+
+---
+
+### Consistent Dashboard Styling
+
+To maintain a consistent dashboard appearance, the **Format Painter** tool was used to copy the formatting from the existing dashboard visuals.
+
+This ensured consistency across:
+
+- Border styling
+- Rounded corners
+- Shadow effects
+- Overall dashboard appearance
+
+---
+
+### Border & Effects
+
+Additional styling was applied to better integrate the slicer with the rest of the dashboard.
+
+| Property | Value |
+|----------|-------|
+| Border Colour | `#D9DEE7` |
+| Corner Radius | **12 px** |
+| Shadow | Enabled |
+
+---
+
+### Slicer Header
+
+The slicer header was enabled and formatted to improve readability.
+
+| Property | Value |
+|----------|-------|
+| Font Size | **15** |
+| Font Weight | **Bold** |
+
+---
+
+### Tile Formatting
+
+The department tiles were customised to create a modern navigation experience.
+
+| Property | Value |
+|----------|-------|
+| Background Colour | `#12239E` |
+| Font Colour | **White** |
+| Font Weight | **Bold** |
+
+The selected styling provides strong visual contrast, making department selections clear while remaining consistent with the dashboard's colour palette.
+
+---
+
+## 📊 Business Insight
+
+The Department slicer allows users to instantly filter every KPI and visualization across the dashboard for a selected department.
+
+This interactive feature enables HR teams to perform department-specific analysis without creating multiple reports, making the dashboard more flexible and user-friendly.
+
+---
+
+## 🎛 Interactive Dashboard Progress
+
+The dashboard now includes:
+
+- 🎯 Department slicer
+- Dynamic cross-filtering across all visualizations
+- Consistent interactive styling
+
+The next step is to develop the **Age Group slicer**, completing the dashboard's interactive filtering capabilities before moving on to final dashboard refinements.
+
 # 🎯 Project Objectives
 
 The completed dashboard will help answer questions such as:
@@ -1218,10 +1332,11 @@ Current accomplishments include:
 - Data cleaning and transformation using Power Query.
 - Dashboard layout and branding.
 - Workforce KPI development.
-- Development of seven analytical visualizations supporting workforce demographics, employee distribution, attrition analysis, and experience trend analysis.
+- Development of seven analytical visualizations covering workforce demographics, employee distribution, attrition analysis, and experience trends.
+- Implementation of the first interactive dashboard slicer for department-level filtering.
 - Dashboard styling using a consistent visual design.
 
-The next phase of development will focus on expanding the analytical visualizations, adding report slicers, improving interactivity, and finalizing the dashboard for deployment.
+The dashboard has now entered the interactive development phase, with report slicers being added to improve user experience before final dashboard testing and deployment.
 
 ---
 
@@ -1229,13 +1344,12 @@ The next phase of development will focus on expanding the analytical visualizati
 
 The remaining stages of the project include:
 
-- Additional analytical visualizations
-- Interactive slicers and report filters
-- Dashboard navigation enhancements
-- Advanced DAX calculations
-- Workforce demographic analysis
-- Employee retention and workforce trend analysis
-- Dashboard optimization and final polishing
+- Complete the remaining interactive slicers and report filters.
+- Enhance dashboard interactivity and user experience.
+- Optimize dashboard layout, spacing, and visual alignment.
+- Improve report performance and responsiveness.
+- Conduct final dashboard testing and validation.
+- Publish and document the completed Power BI dashboard.
 
 ---
 
