@@ -27,7 +27,7 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Validated data types.
 - Loaded the cleaned dataset into Power BI.
 - Designed the dashboard header.
-- Applied a consistent report theme and colour palette.
+- Applied a consistent report theme and color palette.
 - Added dashboard branding with a custom logo.
 - Created the Total Employees KPI card.
 - Created the Active Employees KPI card.
@@ -43,6 +43,7 @@ Each major milestone is maintained in a separate Git branch to demonstrate an or
 - Developed the Age Group Distribution stacked column chart.
 - Developed the Attrition by Gender pie chart.
 - Developed the Attrition Trend by Experience area chart.
+- Developed the Department-Wise Employee Count funnel chart.
 
 ## 🔄 Next Steps
 
@@ -1070,6 +1071,88 @@ By analyzing attrition trends based on employee experience, HR teams can identif
 
 ---
 
+---
+
+## 🔻 Visualization 7 – Department-Wise Employee Count
+
+The seventh visualization was developed to display the distribution of employees across different departments within the organisation.
+
+A **Funnel Chart** was selected because it provides a clear comparison of workforce size across departments, making it easy to identify departments with the largest and smallest employee counts.
+
+---
+
+### Data Configuration
+
+The following fields were assigned to the visual.
+
+| Field | Assignment |
+|--------|------------|
+| Category | **Department** |
+| Values | **Count of EmpID** |
+
+Using the **Count of EmpID** aggregation enables the chart to display the total number of employees within each department.
+
+---
+
+### Chart Title
+
+The chart title was updated to clearly describe the purpose of the visualization.
+
+| Property | Value |
+|----------|-------|
+| Title | **Department-Wise Employee Count** |
+
+---
+
+### Visual Dimensions
+
+The chart was positioned alongside the existing visualizations to complete the lower section of the dashboard.
+
+| Property | Value |
+|----------|-------|
+| Width | **332 px** |
+| Height | **240 px** |
+| Horizontal Position | **937 px** |
+| Vertical Position | **469 px** |
+
+---
+
+### Visual Formatting
+
+To maintain a consistent dashboard design, the **Format Painter** tool was used.
+
+Formatting from one of the existing dashboard visualizations was copied and applied to the funnel chart, ensuring consistency across:
+
+- Border styling
+- Rounded corners
+- Shadow effects
+- Background formatting
+- Overall dashboard appearance
+
+---
+
+### Category Label Formatting
+
+The category labels were formatted to improve readability.
+
+| Property | Value |
+|----------|-------|
+| Font Colour | **Black** |
+| Font Weight | **Bold** |
+| Font Size | **9** |
+
+The **Conversion Rate Labels** were disabled to remove unnecessary information and keep the visualization focused on employee counts.
+
+---
+
+## 📊 Business Insight
+
+This visualization provides a quick overview of employee distribution across departments, allowing users to identify departments with the highest and lowest workforce strength.
+
+These insights support workforce planning, departmental resource allocation, and organisational structure analysis.
+
+---
+
 ## 📈 Dashboard Progress
 
 The dashboard currently includes:
@@ -1082,9 +1165,10 @@ The dashboard currently includes:
 - 📊 Age Group Distribution stacked column chart.
 - 🥧 Attrition by Gender pie chart.
 - 📈 Attrition Trend by Experience area chart.
+- 🔻 Department-Wise Employee Count funnel chart.
 - Consistent dashboard styling and formatting.
 
-The next stage of development will focus on creating additional analytical visualizations, report slicers, filters, and interactive dashboard components.
+The next stage of development will focus on creating interactive slicers, report filters, and final dashboard enhancements to improve user experience and analytical capabilities.
 
 ---
 
@@ -1134,7 +1218,7 @@ Current accomplishments include:
 - Data cleaning and transformation using Power Query.
 - Dashboard layout and branding.
 - Workforce KPI development.
-- Development of six analytical visualizations supporting workforce demographics, employee attrition, and experience trend analysis.
+- Development of seven analytical visualizations supporting workforce demographics, employee distribution, attrition analysis, and experience trend analysis.
 - Dashboard styling using a consistent visual design.
 
 The next phase of development will focus on expanding the analytical visualizations, adding report slicers, improving interactivity, and finalizing the dashboard for deployment.
